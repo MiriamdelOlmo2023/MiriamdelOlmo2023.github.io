@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Gran Premio de Ciudad Real</title>
+    <link rel="stylesheet" type="text/css" href="F1.css">
+</head>
+<body onload="mostrarTabla()">
+    <div class="title">
+        <h1>Gran Premio de Ciudad Real</h1>
+        <span>Circuito “Isla Tortuga"</span>
+    </div>
+    <table id="pilotos-list">
+        <thead>
+            <tr>
+                <th>Piloto</th>
+                <th>Dorsal</th>
+                <th>Escuderia</th>
+                <th>Monoplaza</th>
+                <th>Potencia</th>
+                <th>Marca Motorista</th>
+                <th>Potencia</th>
+                <th>Carrera Finalizada</th>
+                <th>Distancia Recorrida</th>
+                <th>Vuelta Rápida</th>
+                <th>Total Vueltas</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+    <div id="btn1div">
+        <button type="button" id="btn1" onclick="turnos()"class='glowing-btn'><span class='glowing-txt'>EMPE<span class='faulty-letter'>Z</span>AR <span class='faulty-letter'>C</span>ARR<span class='faulty-letter'>E</span>RA</span></button>
+    </div>
+    <div id="btn2div" hidden>
+        <button type="button" id="btn2" onclick="turnos()"class='glowing-btn'><span class='glowing-txt'>SIG<span class='faulty-letter'>U</span>IENTE <span class='faulty-letter'>T</span>UR<span class='faulty-letter'>N</span>O</span></button>
+    </div>    
+    <div id="btn3div" hidden>
+        <button type="button" id="btn3" onclick="turnos()"class='glowing-btn'><span class='glowing-txt'>MOST<span class='faulty-letter'>R</span>AR C<span class='faulty-letter'>L</span>ASIFI<span class='faulty-letter'>C</span>ACIÓN</span></button>
+    </div>
+    <div id="podium" hidden>
+        <h3>GANADOR DE LA VUELTA RÁPIDA</h3>
+        <p id="vueltarapida"></p>
+        <h3>TOP 10 CLASIFICADOS</h3>
+        <table id="pilotos-ganadores">
+            <thead>
+                <tr>
+                    <th>Piloto</th>
+                    <th>Dorsal</th>
+                    <th>Equipo</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <h3>PUNTOS POR ESCUDERÍA</h3>
+        <table id="escuderia-ganadores">
+            <thead>
+                <tr>
+                    <th>Escuderia</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+
+    <script src="Main.js"></script>
+</body>
+</html>
