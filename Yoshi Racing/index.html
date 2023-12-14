@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Yoshi Racing</title>
+    <link rel="stylesheet" type="text/css" href="YoshiRacing.css">
+    <link rel="icon" href="source/gurdo.png" type="image/png">
+</head>
+<body>
+    <div id="cabecera">
+        <img id="logo" src="source/logo.png">
+        <h3 id="nombreCircuito">CIRCUITO</h3>
+    </div>
+    <div id="centro">
+        <div style="margin-left: 5%;">
+            <p class="pType" id="saldo">SALDO: 100</p>
+            <div id="botones">
+                <button type="button" class="btn" id="comprar">INGRESAR</button>
+                <button type="button" class="btn" id="retirar">RETIRAR</button>
+            </div>
+            <div id="btnCarreras">
+                <p class="pType">PROXIMAS CARRERAS</p>
+    
+                <button type="button" class="btnCarrera" id="btncarrera1">1</button><br>
+                <button type="button" class="btnCarrera" id="btncarrera2">2</button><br>
+                <button type="button" class="btnCarrera" id="btncarrera3">3</button><br>
+                <button type="button" class="btnCarrera" id="btncarrera4">4</button><br>
+                <button type="button" class="btnCarrera" id="btncarrera5">5</button>
+            </div>
+            <p id="reloj">Hora actual:</p>
+        </div>
+        <div id="contenedorTabla">
+            <table id="tablaCarreras">
+                <thead>
+                    <tr>
+                        <th>Corredor</th>
+                        <th>Nombre</th>
+                        <th>Aceleración</th>
+                        <th>Velocidad</th>
+                        <th>Experiencia</th>
+                        <th>Cuota de Mercado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Circuito 1</td>
+                        <td>12:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <img id="imgCircuito">
+            <br>
+            <button type="button" class="btnApuesta" id="empezar">Empezar carrera</button><br>
+            <button type="button" class="btnApuesta" id="btnApuesta">Realizar apuesta</button><br>
+           
+            <div id="divApuesta" hidden>
+                <label for="listaYoshis">Selecciona quién crees que quedará 1º:</label>
+                <select id="listaYoshis"></select>
+                <p>¿Cuánto quieres apostar?</p>
+                <div style="display: inline-block; margin-right: 10px;">
+                    <p id="cantApostado">0</p>
+                </div>
+                <div style="display: flex;">
+                    <button type="button" class="btnApostado" id="50">+50</button><br>
+                    <button type="button" class="btnApostado" id="10">-10</button><br>
+                    <button type="button" class="btnApostado" id="resto">Resto</button><br>
+                </div>
+                <div id="botones">
+                    <button type="button" class="btn" id="confirmar">CONFIRMAR</button>
+                    <button type="button" class="btn" id="cancelar" onclick="view.cancelar()">CANCELAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalRetirar" class="modal">
+        <span class="close-button" onclick="view.closeModalRetirar()">&#10006;</span>
+        <p id="pRetirarFichas" class="pModal">Saldo a retirar</p>
+        <input id="inputRetirarFichas" class="inputModal" type="text" placeholder="Numero de fichas"/>
+        <div class="botonesModal">
+            <button class="botonModal" id="aceptarRetirar">Aceptar</button>
+            <button class="botonModal" onclick="view.closeModalRetirar()">Cancelar</button>
+        </div>
+    </div>
+    <div id="modal-overlayRetirar" class="modal-overlay"></div>
+
+    <div id="modalIngresar" class="modal">
+        <span class="close-button" onclick="view.closeModalIngresar()">&#10006;</span>
+        <p id="pIngresarFichas" class="pModal">Ingresar saldo</p>
+        <input id="inputIngresarFichas" class="inputModal" type="text" placeholder="Numero de fichas"/>
+        <div class="botonesModal">
+            <button class="botonModal" id="aceptarIngresar">Aceptar</button>
+            <button class="botonModal" onclick="view.closeModalIngresar()">Cancelar</button>
+        </div>
+    </div>
+    <div id="modal-overlayIngresar" class="modal-overlay"></div>
+
+    <div id="modalClasificacion" class="modal">
+        <span class="close-button" onclick="view.closeModalClasificacion()">&#10006;</span>
+        <p class="pModal" id="pClasificados">Clasificados</p>
+        <div>
+            <ol id="listaClasificados"></ol>
+            <img id="podium" src="source/podium.png">
+            <img id="p1" class="yoshisGanadores" src="">
+            <img id="p2" class="yoshisGanadores" src="">
+            <img id="p3" class="yoshisGanadores" src="">
+        </div>
+        <p id="ganado" style="font-weight: bold; margin-bottom: 20px;"></p>
+        <div class="botonesModal">
+            <button class="botonModal" id="cerrarClasificacion" onclick="view.closeModalClasificacion()">Cerrar</button>
+        </div>
+    </div>
+    <div id="modal-overlayClasificacion" class="modal-overlay"></div>
+    <script src="YoshiRacing.js"></script>
+</body>
+</html>
