@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Batalla naval</title>
+    <link rel="stylesheet" type="text/css" href="Piratas.css">
+</head>
+<body>
+    <h1 id="title">BATALLA NAVAL</h1>
+    <p id="prueba"></p>
+    <div id="contenedor">
+        <div id="botones">
+            <button onclick="visualizarPiratas()" class="menu">Visualizar piratas</button>
+            <button onclick="añadirPiratasMostrar()" class="menu">Añadir piratas</button>
+            <button onclick="eliminarPirata()" class="menu">Eliminar piratas</button>
+            <button onclick="simularBatalla()" class="menu">Simular batalla</button>
+        </div>
+
+        <div id="divtabla">
+            <div id="visualizarPiratas" hidden>
+                <p id="visError"></p>
+                <table id="visualizarPiratasTabla">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="añadirPirata" hidden>
+            <h3>Añadir pirata:</h3>
+            <select id="añadirPirataSelect">
+                <option value="Artillero" selected>Artillero</option>
+                <option value="Cañonero">Cañonero</option>
+                <option value="Pistolero">Pistolero</option>
+            </select>
+
+            <input type="text" placeholder="Nombre del pirata" id="nombreNuevoPirata">
+            <button id="botonAñadirPirata" onclick="añadirPirata()">Añadir</button>
+        </div>
+
+        <div id="divtabla">
+            <div id="eliminarPirata" hidden>
+                <p id="elimError"></p>
+                <table id="eliminarPiratasTabla">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="simularBatalla" hidden>
+            <h3>Simulación de batalla</h3>
+            <p id="primerP"></p>
+            <div id="mostrarVS" hidden>
+                <div id="navio1">
+                    <table id="tabla1">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 id="vs">VS</h3>
+                <div id="navio2">
+                    <table id="tabla2">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button  class="menu" id="batalla" hidden onclick="empezar()">Empezar batalla</button>
+            <h3 id="resultado"></h3>
+        </div>
+    </div>
+    <script src="Piratas.js"></script>
+</body>
+</html>

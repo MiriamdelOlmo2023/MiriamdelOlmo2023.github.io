@@ -1,0 +1,151 @@
+body {
+  background-image: url('fondo.jpg'); /*inspirado en el fondo de Molada xdd*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Papyrus";
+  font-size: 50px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); 
+}
+
+h3 {
+  text-align: left; 
+  font-family: "Papyrus";
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); 
+  margin-top: -3px;
+  font-size: 25px;
+}
+
+#botones {
+  position: fixed;
+  bottom: 30px;
+  padding: 2px;
+}
+
+#contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh; 
+}
+
+#visualizarPiratas, #añadirPirata, #eliminarPirata, #simularBatalla {
+  background-color: rgba(255, 255, 255, 0.522);
+  text-align: center;  
+  padding: 15px;
+  border-radius: 17px;
+}
+
+#visualizarPiratas, #eliminarPirata {
+  margin-bottom: 20%;
+}
+
+#divtabla {
+  margin-top: 7%;
+}
+
+th {
+  padding: 5px;
+  padding-top: 1px;
+  padding-bottom: 15px;
+  font-family: "Papyrus";
+  font-size: 25px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); 
+}
+
+td {
+  padding: 5px;
+  padding-top: 1px;
+  width: 170px;
+  text-align: left;
+  border-width: 1px;
+  border: outset black;
+  border-top: none;
+  border-left: none;
+}
+
+button {
+  display: center;
+}
+
+#eliminarPiratasTabla td:nth-child(3) {
+  text-align: center; /*Poder alinear unicamente los botones en el centro de la celda*/
+}
+
+#mostrarVS {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navio1 {
+  width: 40%;
+  box-sizing: border-box;
+}
+
+#navio2 {
+  width: 40%;
+  box-sizing: border-box;
+}
+
+#vs {
+  text-align: center;
+}
+
+#batalla {
+  margin-top: 35px;
+}
+
+#resultado {
+  margin-top: 35px;
+  text-align: center;
+}
+
+button{
+  align-self:center;
+  background-color: #634d406c;
+  transition:all .5s ease;
+  color:rgb(232, 197, 154);
+  font-size:12px;
+  letter-spacing:1px;
+  outline:none;
+  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 2px #41403E;
+  font-family: "Papyrus";
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); 
+  font-weight: bold;
+  
+}
+
+button:hover{
+  box-shadow:2px 8px 4px -6px hsla(0, 0%, 0%, 0.505);
+}
+
+.menu, #botonAñadirPirata {
+  font-size:20px;
+}
+
+select, input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7a5;
+  font-size: 16px;
+  width: 200px;
+  margin: 3px;
+}
+
+select {
+  width: 150px;
+}
+
+select:focus, input[type="text"]:focus {
+  border-color: #41403E;
+  box-shadow: 0 0 8px hsla(0, 0%, 0%, 0.505);
+}
